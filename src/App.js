@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React, integrate jenkins together to github. cntinuamos aprendiendo</h1>
+          <h1 className="App-title">Welcome to React, integrate jenkins together to github. cntinuamos aprendiendo ahora dente aws</h1>
           <h2>esto esta quedando excelente, funciono el WebHook, ahora con credenciales. {this.state.value}</h2>   
         </header>
         <p className="App-intro">
