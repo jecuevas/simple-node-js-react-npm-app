@@ -9,8 +9,8 @@ pipeline {
         CI = 'true'
         HOME = '.'
     } 
-    node('jenkins-prb'){
-      stages {
+    stages {
+          node('jenkins-prb'){
         stage('Build') { 
             steps {
                 sh 'npm install' 
