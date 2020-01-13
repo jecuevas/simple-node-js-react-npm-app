@@ -13,9 +13,9 @@ node('jenkins-prb'){
   //  stages {
      
         stage('Build') { 
-            steps {
+           // steps {
                 sh 'npm install' 
-            }
+            //}
         }
     /*
         stage('Test') { 
