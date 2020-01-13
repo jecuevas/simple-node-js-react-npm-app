@@ -10,12 +10,13 @@ pipeline {
         HOME = '.'
     } 
     stages {
-          node('jenkins-prb'){
+     node('jenkins-prb'){
         stage('Build') { 
             steps {
                 sh 'npm install' 
             }
         }
+     }
         stage('Test') { 
             steps {
                 sh './jenkins/scripts/test.sh' 
@@ -29,6 +30,6 @@ pipeline {
             }
         }
 
-     }
+      
     } 
 }
