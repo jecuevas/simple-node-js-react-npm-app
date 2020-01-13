@@ -6,10 +6,10 @@ node('jenkins-prb'){
             args '-p 3000:3000' 
         }
     }*/
-    environment {
+   /* environment {
         CI = 'true'
         HOME = '.'
-    } 
+    }*/ 
   //  stages {
      
         stage('Build') { 
