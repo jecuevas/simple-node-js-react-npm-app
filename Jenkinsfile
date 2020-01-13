@@ -8,8 +8,9 @@ pipeline {
     environment {
         CI = 'true'
         HOME = '.'
-    }    
-    stages {
+    } 
+    node('jenkins-prb'){
+      stages {
         stage('Build') { 
             steps {
                 sh 'npm install' 
@@ -28,5 +29,6 @@ pipeline {
             }
         }
 
-    }
+     }
+    } 
 }
