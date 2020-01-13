@@ -1,37 +1,34 @@
-node('jenkins-prb'){
-// pipeline {
-    /*agent {
+pipeline {
+    agent {
         docker {
             image 'node:10-alpine' 
             args '-p 3000:3000' 
         }
-    }*/
-   /* environment {
+    }
+    environment {
         CI = 'true'
         HOME = '.'
-    }*/ 
-  //  stages {
-     
+    } 
+    stages {
+    //      node('jenkins-prb'){
         stage('Build') { 
-           // steps {
+            steps {
                 sh 'npm install' 
-            //}
+            }
         }
-    
         stage('Test') { 
-           // steps {
+            steps {
                 sh './jenkins/scripts/test.sh' 
-            //}
+            }
         }
         stage('Deliver') {
-            //steps {
+            steps {
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/kill.sh'
-            //}
+            }
         }
 
-      
-   // } 
-//  } 
+    // }
+    } 
 }
