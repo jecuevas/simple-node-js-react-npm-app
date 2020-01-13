@@ -10,7 +10,7 @@ node('jenkins-prb'){
         CI = 'true'
         HOME = '.'
     } 
-    stages {
+  //  stages {
      
         stage('Build') { 
             steps {
@@ -32,6 +32,6 @@ node('jenkins-prb'){
         }
 
       
-    } 
+   // } 
 //  } 
 }
